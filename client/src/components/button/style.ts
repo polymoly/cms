@@ -1,0 +1,66 @@
+import { createUseStyles } from "react-jss";
+import { ColorType } from "../../cores/constants/enums";
+
+export default createUseStyles({
+  btn: {
+    paddingyInline: 8,
+    display: "flex",
+    height: 34,
+    maxHeight: 34,
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: ColorType.primary,
+    color: ColorType.onPrimary,
+    transition: "all 250ms ease",
+    border: [1, "solid", ColorType.primary],
+    outline: "none",
+    cursor: "pointer",
+    fontSize: 14,
+    borderRadius: 2,
+    marginInline: 8,
+    position: "relative",
+    overflow: "hidden",
+    "&:hover": {
+      backgroundColor: ColorType.primaryLight,
+      borderColor: ColorType.primaryLight,
+    },
+  },
+  icon: {
+    marginLeft: 4,
+    height: "fit-content",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    verticalAlign: "middle",
+  },
+  text: {
+    height: "fit-content",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  disabled: {
+    backgroundColor: ColorType.disable,
+    borderColor: ColorType.disable,
+    color: ColorType.onDisable,
+    cursor: "default",
+    "&:hover": {
+      backgroundColor: ColorType.disable,
+      borderColor: ColorType.disable,
+      color: ColorType.onDisable,
+    },
+  },
+  loader: {
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    border: [1, "solid", ColorType.disable],
+    backgroundColor: ColorType.disable,
+    position: "absolute",
+    left: 0,
+    top: 0,
+    color: ColorType.onDisable,
+  },
+});
